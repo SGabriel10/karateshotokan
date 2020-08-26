@@ -61,15 +61,18 @@ body {
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
+.leftcolumn {  
   float: left;
-  width: 75%;
+  width: 70%;
+  margin-left: 1%;
+ 
 }
 
 /* Right column */
 .rightcolumn {
   float: left;
   width: 25%;
+  margin-left:2%;
   background-color: #f1f1f1;
   padding-left: 20px;
 }
@@ -101,6 +104,8 @@ body {
   text-align: center;
   background: #ddd;
   margin-top: 20px;
+  position: absolute;
+  width: 100%;
 }
 
 #blog-personal{
@@ -123,6 +128,13 @@ body {
     float: none;
     width: 100%;
   }
+}
+
+
+#build-page{
+    margin-top: 20px;
+    margin-bottom:20px;
+    margin-left: 40%;
 }
 </style>
 </head>

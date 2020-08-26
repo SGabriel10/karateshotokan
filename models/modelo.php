@@ -4,7 +4,7 @@
             if($enlaces=="nosotros"||
                $enlaces=="servicios"||
                $enlaces=="contactenos"||
-               $enlaces=="dojos-items"){
+               $enlaces=="working"){
                $module = "views/modules/".$enlaces.".php";
                }else if($enlaces=="index"){
                 $module = "views/modules/inicio.php"; 

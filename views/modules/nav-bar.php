@@ -10,7 +10,7 @@
           Dojos
         </a>
         <ul class="dropdown-menu">
-          <a class="dropdown-item" href="index.php?action=dojos-items">Dojos Asociados</a>
+          <a class="dropdown-item" href="index.php?action=working">Dojos Asociados</a>
         </ul>
       </li>
     </ul>
