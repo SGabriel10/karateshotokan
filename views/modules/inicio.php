@@ -26,15 +26,33 @@
         <img src='./logo blog.jpeg' id="blog-personal">
         <p>Sensei Cubas 4 dan de la federación y sus emprendimiento como Profesor.</p>
       </div>
+    </div>
+      </div>
+      </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>Blog Personal</h2>
+      <img src='./logo blog.jpeg' id="blog-personal">
+      <p>Sensei Cubas 4 dan de la federación y sus emprendimiento como Profesor.</p>
+    </div>
+
     <div class="card">
       <h3>Auspiciantes</h3>
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
       <div class="fakeimg"><p>Image</p></div>
     </div>
+
       <div class="card">
          <h3>Redes sociales</h3>
          <p>link de redes</p>
       </div>
+
+    <div class="card">
+      <h3>Sigueme a nuestra pagina</h3>
+      <p>link de redes</p>
+    </div>
+
   </div>
 </div>

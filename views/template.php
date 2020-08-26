@@ -12,7 +12,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   font-family: Arial;
   padding: 10px;
@@ -67,6 +66,10 @@ body {
   width: 70%;
   margin-left: 1%;
  
+.leftcolumn {   
+  float: left;
+  width: 75%;
+>>>>>>> c50570d00ed88532ef7f44cf943ef04d63bd943d
 }
 
 /* Right column */
@@ -130,7 +133,6 @@ body {
     width: 100%;
   }
 }
-
 
 #build-page{
     margin-top: 20px;
