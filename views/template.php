@@ -69,7 +69,6 @@ body {
 .leftcolumn {   
   float: left;
   width: 75%;
->>>>>>> c50570d00ed88532ef7f44cf943ef04d63bd943d
 }
 
 /* Right column */
