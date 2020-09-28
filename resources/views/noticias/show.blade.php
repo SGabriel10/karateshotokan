@@ -1,0 +1,2 @@
+{{$noticia->titulo}}
+{{$noticia->descripcion}}
