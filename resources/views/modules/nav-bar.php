@@ -1,25 +1,23 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="menu">
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="/">Inicio</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dojos Asociados
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="working">Dojos</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Inicio <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href ="nosotros">Nosotros</a>
+        <a class="nav-link" href="/working">Dojos Asociados</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="contactenos">Contactenos</a>
+        <a class="nav-link" href="/nosotros">Nosotros</a>
       </li>
-    
+      <li class="nav-item">
+        <a class="nav-link" href="/contactenos">Contactos</a>
+      </li>
     </ul>
   </div>
-</nav>
+  </nav>
