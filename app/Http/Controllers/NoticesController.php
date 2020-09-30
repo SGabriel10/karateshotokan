@@ -46,16 +46,6 @@ class NoticesController extends Controller
    public function edit_notice($id){
     $notice= Noticia::findOrFail($id);
     return view('noticias.edit',compact('notice'));
-    /*
-    Validator::make($request->all(), [
-        'titulo' => 'required',
-        'descripcion' => 'required'
-    ])->validate();
-
-    $notice->titulo=$request->titulo;
-    $notice->descripcion=$request->descripcion;
-    $notice->save();
-    return back()->with('mensaje','noticia Actualizada');*/
 }
     public function update(Request $request, $id){
         $actualizar=Noticia::findOrFail($id);

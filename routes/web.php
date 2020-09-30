@@ -13,6 +13,9 @@ Route::get('contactenos', function () {
     return view('modules/contactenos');
 })->name('contactenos');
 
+Route::post('/post_upload', 'UploadController@store')->name('publice.post_imagen');
+Route::get('/upload_imagen', 'UploadController@form_upload');
+Route::get('/imagenes', 'UploadController@views_uploads')->name('imagenes');
 //call controller
 Route::get('/Home','HomeController@index');
 Route::get('/','PageController@index');
@@ -24,3 +27,5 @@ Route::put('/noticias/editar/{id}','NoticesController@update')->name('noticias.u
 Route::delete('/noticias/eliminar/{id}','NoticesController@eliminar')->name('noticias.eliminar');
 Route::get('/{id}','NoticesController@show')->name('noticias.show');
 Route::get('/home', 'HomeController@index')->name('home');
+
+

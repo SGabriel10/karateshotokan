@@ -34,7 +34,7 @@
       </div>
     <div class="card">
       <h3>Auspiciantes</h3>
-      @include('animation_publisher')
+      @include('modules.view_uploads')
     </div>
     <div class="card">
       <h3>Redes Sociales</h3>

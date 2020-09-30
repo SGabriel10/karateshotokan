@@ -1,5 +1,5 @@
 <?php
-    $DATABASE_URL = parse_url ('DATABASE_URL');
+
 return [
 
     /*
@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'pgsql'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,13 +38,14 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
+
         'mysql' => [
             'driver' => 'mysql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"],"/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
@@ -55,15 +56,15 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-              'host' => env('DB_HOST', 'ec2-52-200-82-50.compute-1.amazonaws.com'),
-              'port' => env('DB_PORT', '5432'),
-              'database' => env('DB_DATABASE', 'd2k8ilkhu5hpmr'),
-              'username' => env('DB_USERNAME', 'wgxxsfwmxuyvyz'),
-              'password' => env('DB_PASSWORD', '49ded549d862723b669d527f6bb6aacd3d2d5544df784620c5c9fb1d8931f04b'),
-              'charset' => 'utf8',
-              'prefix' => '',
-              'schema' => 'public',
-              'sslmode' => 'prefer',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+            'sslmode' => 'prefer',
         ],
 
         'sqlsrv' => [
