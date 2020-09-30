@@ -60,7 +60,7 @@ return [
               'port' => env('DB_PORT', '5432'),
               'database' => env('DB_DATABASE', 'd2k8ilkhu5hpmr'),
               'username' => env('DB_USERNAME', 'wgxxsfwmxuyvyz'),
-
+        ],
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'host' => env('DB_HOST', 'localhost'),
