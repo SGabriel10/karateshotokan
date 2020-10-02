@@ -27,13 +27,18 @@ class UploadController extends Controller
                 
                 $this->validate($request,$rules,$messages);
                 
+
                 $image= $request->file('image');
-                $new_name= rand().'.'.$image->getClientOriginalExtension();
-                $image->move(public_path("images"),$new_name);
+                $nameOriniginal= $request->file('image')->getClientOriginalName();
+                $name = $nameOriniginal.'.'.$image->getClientOriginalExtension();
+                $destinationPath = public_path('/images');
+                $image->move($destinationPath, $name);
+                var_dump($request->file('image'));
                 $imagen= new File();
-                $imagen->name=$request->name;
-                $imagen->url=$new_name;
+                $imagen->name=$nameOriniginal;
+                $imagen->url=$name;
                 $imagen->save();
+
                 Session::flash('success', "Success!");
                 return redirect('imagenes');
             }
