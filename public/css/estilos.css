@@ -8,17 +8,6 @@
     background: #f1f1f1;
   }
 
-  a:active{
-    color: beige;
-  }
-
-  a:hover{
-    color: blue;
-  }
-
-  
- 
-  
   /* Create two unequal columns that floats next to each other */
   /* Left column */
   .leftcolumn {  
@@ -109,11 +98,11 @@
   }
 
   #about-id{
-    margin-left: 10px;
+    margin-left: 0px;
     margin-top: 10px;
   }
   #card-targets{
-    width: 150px;
+    width: 30%;
     height: 100px;
   }
 
@@ -122,7 +111,7 @@
   }
   #column-id{
     position: relative;
-    left: 25%;
+    /*left: 25%;*/
   }
   #net-social{
     display: inline-block;
