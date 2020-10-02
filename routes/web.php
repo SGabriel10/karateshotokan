@@ -17,6 +17,7 @@ Route::post('/post_upload', 'UploadController@store')->name('publice.post_imagen
 
 Route::get('/publicidades', 'UploadController@index');
 Route::get('/imagenes', 'UploadController@views_uploads')->name('imagenes');
+Route::delete('/publicidades/eliminar/{id}','UploadController@eliminar')->name('publicidad.eliminar');
 //call controller
 Route::get('/Home','HomeController@index');
 Route::get('/','PageController@index');

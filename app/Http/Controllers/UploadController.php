@@ -37,7 +37,6 @@ class UploadController extends Controller
                 $name = $nameOriniginal.'.'.$image->getClientOriginalExtension();
                 $destinationPath = public_path('/images');
                 $image->move($destinationPath, $name);
-                var_dump($request->file('image'));
                 $imagen= new File();
                 $imagen->name=$request->name;
                 $imagen->url=$name;
@@ -55,4 +54,9 @@ class UploadController extends Controller
         $images = File::all();
         return view('publicidad.list_publisher')->with('images', $images);    
     }
+    public function eliminar($id){
+        $item=File::findOrFail($id);
+        $item->delete();
+        return back()->with('mensaje','publicidad eliminada'); 
+}
 }
