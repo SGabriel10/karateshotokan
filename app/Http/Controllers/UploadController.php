@@ -10,10 +10,16 @@ use Illuminate\Support\Facades\Validator;
 
 class UploadController extends Controller
 {
-    public function store (Request $request) {
+    public function __construct(){
+        $this->middleware('auth');
+    }
 
+    public function index(){
+        $images = File::all();
+        return view('publicidad.index')->with('imagenes', $images);;
+    }
+    public function store (Request $request) {
         if ($request->hasFile('image')) {
-            //  Let's do everything here
             if ($request->file('image')->isValid()) {
                 //
                 $rules = [
@@ -26,8 +32,6 @@ class UploadController extends Controller
                 ];
                 
                 $this->validate($request,$rules,$messages);
-                
-
                 $image= $request->file('image');
                 $nameOriniginal= $request->file('image')->getClientOriginalName();
                 $name = $nameOriniginal.'.'.$image->getClientOriginalExtension();
@@ -35,22 +39,20 @@ class UploadController extends Controller
                 $image->move($destinationPath, $name);
                 var_dump($request->file('image'));
                 $imagen= new File();
-                $imagen->name=$nameOriniginal;
+                $imagen->name=$request->name;
                 $imagen->url=$name;
                 $imagen->save();
-
-                Session::flash('success', "Success!");
-                return redirect('imagenes');
+                return back()->with('mensaje','Publicidad Cargada');
             }
         }
         abort(500, 'Could not upload image :(');
     }
 
     public function form_upload() {
-        return view('modules.form_uploads');
+        return view('publicidad.form_uploads');
     }
     public function views_uploads(){
         $images = File::all();
-        return view('modules.view_uploads')->with('images', $images);    
+        return view('publicidad.list_publisher')->with('images', $images);    
     }
 }

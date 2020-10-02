@@ -34,7 +34,7 @@
       </div>
     <div class="card">
       <h3>Auspiciantes</h3>
-      @include('modules.view_uploads')
+      @include('publicidad.list_publisher')
     </div>
     <div class="card">
       <h3>Redes Sociales</h3>

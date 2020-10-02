@@ -1,6 +1,20 @@
 @extends('admin.index')
 @section('seccion_admin')
-@include('noticias.new')
+@if(session('mensaje'))
+<div class="alert alert-success">
+    {{session('mensaje')}}
+</div>
+@endif
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+@include('publicidad.upload')
 <table class="table">
   <thead>
     <tr>
@@ -11,14 +25,13 @@
     </tr>
   </thead>
   <tbody>
-  @foreach($noticias as $item)
+@foreach($imagenes as $item)
     <tr>
       <th scope="row">{{$item->id}}</th>
-      <td>{{$item->titulo}}</td>
-      <td>{{$item->descripcion}}</td>
+      <td>{{$item->name}}</td>
+      <td>{{$item->url}}</td>
       <td>
-            <button><a href="{{route('noticias.edit',$item)}}">Actualizar</a></button>
-            <form action="{{route('noticias.eliminar',$item)}}" method="POST" class="d-inline">
+            <form action="" method="POST" class="d-inline">
             {{method_field('DELETE')}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <button type="submit">Eliminar</button>
@@ -28,5 +41,5 @@
     <tr>
   @endforeach
   </tbody>
-</table>
+  </table>
 @endsection
