@@ -33,13 +33,20 @@ class UploadController extends Controller
                 
                 $this->validate($request,$rules,$messages);
                 $image= $request->file('image');
-                $nameOriniginal= $request->file('image')->getClientOriginalName();
-                $name = $nameOriniginal.'.'.$image->getClientOriginalExtension();
-                $destinationPath = public_path('/images');
-                $image->move($destinationPath, $name);
+                $name= $image->getClientOriginalName();
+                $extension=$image->getClientOriginalExtension();
+                $tmp=str_replace($extension,'',$name);
+                $result = \Cloudinary\Uploader::upload($image,array(
+                    "use_filename" => TRUE,
+                    "public_id"=> $tmp,
+                    "folder" => "images"));
+                /*   $image= $request->file('image');*/
+                //for the local machine store
+               // $destinationPath = public_path('/images');
+                //$image->move($destinationPath, $name);
                 $imagen= new File();
                 $imagen->name=$request->name;
-                $imagen->url=$name;
+                $imagen->url=$tmp;
                 $imagen->save();
                 return back()->with('mensaje','Publicidad Cargada');
             }

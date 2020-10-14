@@ -31,7 +31,7 @@
       <td>{{$item->name}}</td>
       <td>{{$item->url}}</td>
       <td>
-            <form action="{{route('publicidad.eliminar',$item)}}" method="POST" class="d-inline">
+      <form action="{{route('publicidad.eliminar',$item)}}" method="POST" class="d-inline">
             {{method_field('DELETE')}}
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <button type="submit">Eliminar</button>
