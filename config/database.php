@@ -63,6 +63,10 @@ return [
               'password' => env('DB_PASSWORD', 'd6de2a9d739393dc2c442fb57e5aa6a86404c5e5b6efb0cccdff3595f6c61079'),
               'charset' => 'utf8',
               'prefix' => '',
+              'schema' => 'public',
+              'sslmode' => 'prefer',
+              'strict' => true,
+              'engine' => null,
         ],
         'sqlsrv' => [
             'driver' => 'sqlsrv',
