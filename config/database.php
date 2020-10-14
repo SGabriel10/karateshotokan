@@ -56,8 +56,7 @@ return [
 
         'pgsql' => [
               'host' => env('DB_HOST', 'ec2-23-23-36-227.compute-1.amazonaws.com'),
-              'port' => env('DB_PORT', '5432'),
-              
+              'port' => env('DB_PORT', '5432'),        
               'database' => env('DB_DATABASE', 'dbr6ksfmcb7lmf'),
               'username' => env('DB_USERNAME', 'gxjaokcdmghwfq'),
               'password' => env('DB_PASSWORD', 'd6de2a9d739393dc2c442fb57e5aa6a86404c5e5b6efb0cccdff3595f6c61079'),
