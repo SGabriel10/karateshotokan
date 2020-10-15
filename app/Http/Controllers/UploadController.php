@@ -63,6 +63,7 @@ class UploadController extends Controller
     }
     public function eliminar($id){
         $item=File::findOrFail($id);
+        $result = \Cloudinary\Uploader::destroy($item->url, $options = array());
         $item->delete();
         return back()->with('mensaje','publicidad eliminada'); 
 }
