@@ -1,6 +1,7 @@
 <?php
 
 Auth::routes();
+Route::post('/logout','Auth\LoginController@logout');
 Route::get('working', function () {
     return view('modules/working');
 })->name('working');

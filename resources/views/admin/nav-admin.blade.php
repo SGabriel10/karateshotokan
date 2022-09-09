@@ -15,6 +15,13 @@
       <li class="nav-item">
         <a class="nav-link" href="/publicidades">Publicidad</a>
       </li>
+
+      <li class="nav-item">
+        <form action="/logout" method= "POST">
+            {{ csrf_field() }}
+          <a href="#" class="nav-link" onClick="this.closest('form').submit()">Cerrar Sesion</a>
+        </form>
+      </li>
     </ul>
   </div>
   </nav>
