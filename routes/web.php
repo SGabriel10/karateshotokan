@@ -29,7 +29,9 @@ Route::post('/','NoticesController@post_notice')->name('noticias.post_notice');
 Route::get('/noticias/editar/{id}','NoticesController@edit_notice')->name('noticias.edit');
 Route::put('/noticias/editar/{id}','NoticesController@update')->name('noticias.update');
 Route::delete('/noticias/eliminar/{id}','NoticesController@eliminar')->name('noticias.eliminar');
-Route::get('/{id}','NoticesController@show')->name('noticias.show');
+Route::get('/noticias/{id}','NoticesController@show')->name('noticias.show');
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/add_student','StudentController@store');
 
 

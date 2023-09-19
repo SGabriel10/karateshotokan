@@ -20,9 +20,10 @@ class NoticesController extends Controller
         return view('noticias.new');
    }
 
-    public function show($id){
-        $noticia = Noticia::findOrFail($id);
-        return view('noticias.show',compact('noticia'));
+    public function show(string $id){
+
+      return view('noticias.show',['noticia' => Noticia::findOrFail($id)]);
+
     }
   
     public function post_notice(Request $request){

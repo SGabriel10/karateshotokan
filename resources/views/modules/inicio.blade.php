@@ -5,7 +5,7 @@
   @foreach($noticias as $noticia)
       <div class="card">
       <div class="card-header">
-        Noticias,{{$noticia->created_at}}
+        Noticias,{{$noticia->created_at->format('d-m-y')}}
        </div>
        <div class="card-body">
         <h5 class="card-title">{{$noticia->titulo}}</h5>
@@ -39,8 +39,8 @@
     <div class="card">
       <h3>Redes Sociales</h3>
       <div id="net-social">
-        <a href="https://www.facebook.com/SKIF-Karate-tradicional-Paraguay-2206812966296795/"><img src="{{asset('facebook.png')}}" style="with=10%"></a>
-        <a href="https://www.instagram.com/juanr.cubas/?hl=es-la"><img src="{{asset('instagram.jpg')}}" style="with=10%"></a>
+        <a href="https://www.facebook.com/SKIF-Karate-tradicional-Paraguay-2206812966296795/" class="fa fa-facebook"></a>
+        <a href="https://www.instagram.com/juanr.cubas/?hl=es-la" class="fa fa-instagram"></a>
       </div>
     </div>
     </div>

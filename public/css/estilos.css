@@ -99,7 +99,9 @@ footer{
 .about-section{
     margin-top: 10px;
 }
-
+card-img-top{
+    height: 50px;
+}
 #net-social{
     display: inline-block;
 }

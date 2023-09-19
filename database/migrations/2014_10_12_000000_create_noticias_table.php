@@ -10,10 +10,10 @@ class CreateNoticiasTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->timestamps();
-    });
+        });
     }
     public function down(){
-        Schema::dropIfExits('noticias');
+        Schema::drop('noticias');
     }
 }
 ?>

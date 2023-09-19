@@ -28,6 +28,6 @@ class CreatePubliceTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('files');
+        Schema::drop('files');
     }
 }
